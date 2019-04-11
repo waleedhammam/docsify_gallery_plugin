@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="Description">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//unpkg.com/docsify/themes/vue.css">
+  <!-- gallery -->
+  <link href="gallery/simplelightbox.min.css" rel="stylesheet">
+  <!-- end of gallery -->
+</head>
+<body>
+  <div id="app"></div>
+  
+  <!--start of images-->
+  <div class="gallery">
+      <a href="gallery/test_images/image1.jpg" class="big">
+      <img src="gallery/test_images/thumbs/thumb1.jpg" alt="" title="">
+      </a>
+      <a href="gallery/test_images/image2.jpg" class="big">
+        <img src="gallery/test_images/thumbs/thumb2.jpg" alt="" title="">
+      </a>
+      <a href="gallery/test_images/image3.jpg" class="big">
+        <img src="gallery/test_images/thumbs/thumb3.jpg" alt="" title="">
+      </a>
+      <a href="gallery/test_images/image4.jpg" class="big">
+          <img src="gallery/test_images/thumbs/thumb4.jpg" alt="" title="">
+      </a>
+        
+    </div>     
+  <!--end of images -->
+
+  <script>
+    window.$docsify = {
+      name: '',
+      repo: '',
+      themeColor: '#3F51B5',
+        // gallery plugin
+      plugins: [
+        function(hook) {
+          var gallery = $('.gallery a').simpleLightbox();
+        }
+      ]
+    }
+  </script>
+  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="gallery/simple-lightbox.min.js"></script>
+  <!-- end of gallery -->
+</body>
+</html>
